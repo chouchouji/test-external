@@ -22,7 +22,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue'],
       output: {
-        dir: 'dist',
+        dir: 'docs',
         exports: 'named',
         globals: {
           vue: 'Vue',
