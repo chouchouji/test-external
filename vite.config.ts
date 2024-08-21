@@ -3,7 +3,6 @@ import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { analyzer } from 'vite-bundle-analyzer'
-import createExternal from 'vite-plugin-external';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,11 +13,6 @@ export default defineConfig({
       analyzerMode: 'server',
       openAnalyzer: false,
     }),
-    createExternal({
-      externals: {
-        vue: 'Vue'
-      }
-    })
   ],
   resolve: {
     alias: {
@@ -27,6 +21,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
+      external: ['vue'],
       output: {
         dir: 'docs',
       }
