@@ -6,7 +6,7 @@ import { analyzer } from 'vite-bundle-analyzer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  // base: './',
   plugins: [
     vue(),
     analyzer({
@@ -21,13 +21,13 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['vue'],
+      //external: ['vue'],
       output: {
         dir: 'docs',
-        exports: 'named',
-        globals: {
-          vue: 'Vue',
-        }
+        // exports: 'named',
+        // globals: {
+        //   vue: 'Vue',
+        // }
       }
     }
   }
