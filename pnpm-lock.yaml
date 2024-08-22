@@ -11,6 +11,9 @@ importers:
       lodash-es:
         specifier: ^4.17.21
         version: 4.17.21
+      vue:
+        specifier: ^3.4.38
+        version: 3.4.38(typescript@5.4.5)
     devDependencies:
       '@rushstack/eslint-patch':
         specifier: ^1.8.0
@@ -60,9 +63,6 @@ importers:
       vite-bundle-analyzer:
         specifier: ^0.10.5
         version: 0.10.5
-      vue:
-        specifier: ^3.4.38
-        version: 3.4.38(typescript@5.4.5)
       vue-tsc:
         specifier: ^2.0.21
         version: 2.0.29(typescript@5.4.5)
