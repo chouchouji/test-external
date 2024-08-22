@@ -14,9 +14,9 @@ export default defineConfig({
       analyzerMode: 'server',
       openAnalyzer: false,
     }),
-    externalGlobals({
-      vue: "Vue"
-    })
+    // externalGlobals({
+    //   vue: "Vue"
+    // })
   ],
   resolve: {
     alias: {
