@@ -1,39 +1,38 @@
 # test-external
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a repo that lead you how to use `rollupOptions.external` in `vite`. Additionaly, your foramt is not `umd` or `iife`.
 
-## Recommended IDE Setup
+# First Step
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+set `external`
 
-## Type Support for `.vue` Imports in TS
+```ts
+build: {
+  rollupOptions: {
+    external: ['vue'],
+  }
+}
+```
+# Second Step
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+install `rollup-plugin-external-globals`
 
-## Customize configuration
+```ts
+import externalGlobals from "rollup-plugin-external-globals";
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-pnpm install
+plugins: [
+  ...,
+  externalGlobals({
+    vue: "Vue"
+  })
+],
 ```
 
-### Compile and Hot-Reload for Development
+# Third Step
 
-```sh
-pnpm dev
+add cdn in html file
+
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-pnpm build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-pnpm lint
-```
