@@ -15,7 +15,8 @@ export default defineConfig({
       openAnalyzer: false,
     }),
     externalGlobals({
-      vue: "Vue"
+      vue: "Vue",
+      echarts: 'echarts',
     })
   ],
   resolve: {
@@ -25,7 +26,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'echarts'],
       output: {
         dir: 'docs',
       }
