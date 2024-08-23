@@ -1,18 +1,17 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import * as echarts from 'echarts';
+import { ref, onMounted } from 'vue'
+import * as echarts from 'echarts'
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
-import { isNotEmptyArray } from './utils';
+import { isNotEmptyArray } from './utils'
 
 const arr = ref([1])
 
-
 onMounted(() => {
-  var chartDom = document.getElementById('main');
-  var myChart = echarts.init(chartDom);
-  var option;
+  var chartDom = document.getElementById('main')
+  var myChart = echarts.init(chartDom)
+  var option
 
   option = {
     xAxis: {
@@ -28,16 +27,14 @@ onMounted(() => {
         type: 'bar'
       }
     ]
-  };
+  }
 
-  option && myChart.setOption(option);
+  option && myChart.setOption(option)
 })
 </script>
 
 <template>
-  <h1 v-if="isNotEmptyArray(arr)">
-    hhhhh
-  </h1>
+  <h1 v-if="isNotEmptyArray(arr)">hhhhh</h1>
   <div id="main" style="width: 600px; height: 400px"></div>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
