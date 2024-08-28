@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import * as echarts from 'echarts'
+
+import { Button as VarButton } from '@varlet/ui'
+import '@varlet/ui/es/button/style/index.mjs'
+
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
@@ -35,6 +39,7 @@ onMounted(() => {
 
 <template>
   <h1 v-if="isNotEmptyArray(arr)">hhhhh</h1>
+  <VarButton type="primary" style="width: 100px;">click me</VarButton>
   <div id="main" style="width: 600px; height: 400px"></div>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />

@@ -13,6 +13,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@varlet/touch-emulator": "^3.3.16",
+    "@varlet/ui": "^3.3.16",
     "echarts": "^5.5.1",
     "lodash-es": "^4.17.21",
     "vue": "^3.4.38"
