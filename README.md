@@ -17,16 +17,30 @@ build: {
 
 install `rollup-plugin-external-globals`
 
+```sh
+pnpm add rollup-plugin-external-globals -D
+
+npm i rollup-plugin-external-globals -D
+
+yarn i rollup-plugin-external-globals -D
+```
+
+register it in production mode
+
 ```ts
 import externalGlobals from "rollup-plugin-external-globals";
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 plugins: [
   ...,
-  externalGlobals({
+  isProduction && externalGlobals({
     vue: "Vue"
   })
 ],
 ```
+
+_\* ***Don't recommend*** using this rollup plugin in ***development mode***, it may affect your normal work._
 
 # Third Step
 
