@@ -21,10 +21,20 @@ export default defineConfig({
     }
   },
   build: {
+    minify: false,
     rollupOptions: {
       external: ['vue', 'echarts'],
       output: {
         dir: 'docs',
+        manualChunks(id) {
+          if (id.includes('src/utils')) {
+            return 'utils'
+          }
+
+          if (id.includes('node_modules/lodash-es')) {
+            return 'lodash'
+          }
+        }
       }
     }
   },

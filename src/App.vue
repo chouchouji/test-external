@@ -8,16 +8,17 @@ import '@varlet/ui/es/button/style/index.mjs'
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 
-import { isNotEmptyArray } from './utils'
+import { isNotEmptyArray } from './utils/utils-array'
+import { clamp } from './utils/utils-number'
+import { camelize } from './utils/utils-string'
 
 const arr = ref([1])
 
 onMounted(() => {
-  var chartDom = document.getElementById('main')
-  var myChart = echarts.init(chartDom)
-  var option
+  const chartDom = document.getElementById('main')
+  const myChart = echarts.init(chartDom)
 
-  option = {
+  const option = {
     xAxis: {
       type: 'category',
       data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
@@ -34,6 +35,9 @@ onMounted(() => {
   }
 
   option && myChart.setOption(option)
+
+  console.log(clamp(4, 3,5))
+  console.log(camelize('chouchouji'))
 })
 </script>
 
