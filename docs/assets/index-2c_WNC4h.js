@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./home-ChFxYtEe.js","./ButtonSfc-CC9mCO7r.js","./ButtonSfc-CBsl0AUJ.css","./utils-DJzies15.js","./lodash-RJPfgWqI.js","./home-CtC4xdxo.css","./about-rpE5aoRE.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./home-D0ny29yL.js","./ButtonSfc-CC9mCO7r.js","./ButtonSfc-CBsl0AUJ.css","./utils-DJzies15.js","./lodash-RJPfgWqI.js","./home-CV9Y_zdZ.css","./about-B2d99Jkg.js"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -525,6 +525,12 @@ function createWebHistory(base) {
     get: () => historyNavigation.state.value
   });
   return routerHistory;
+}
+function createWebHashHistory(base) {
+  base = location.host ? base || location.pathname + location.search : "";
+  if (!base.includes("#"))
+    base += "#";
+  return createWebHistory(base);
 }
 function isRouteLocation(route) {
   return typeof route === "string" || route && typeof route === "object";
@@ -1952,11 +1958,12 @@ function useRouter() {
   return Vue.inject(routerKey);
 }
 const routes = [
-  { path: "/", component: () => __vitePreload(() => import("./home-ChFxYtEe.js"), true ? __vite__mapDeps([0,1,2,3,4,5]) : void 0, import.meta.url) },
-  { path: "/about", component: () => __vitePreload(() => import("./about-rpE5aoRE.js"), true ? __vite__mapDeps([6,1,2,3,4]) : void 0, import.meta.url) }
+  { path: "/", redirect: "/home" },
+  { path: "/home", component: () => __vitePreload(() => import("./home-D0ny29yL.js"), true ? __vite__mapDeps([0,1,2,3,4,5]) : void 0, import.meta.url) },
+  { path: "/about", component: () => __vitePreload(() => import("./about-B2d99Jkg.js"), true ? __vite__mapDeps([6,1,2,3,4]) : void 0, import.meta.url) }
 ];
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 });
 const inBrowser = typeof window !== "undefined";

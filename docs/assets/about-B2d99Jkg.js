@@ -1,4 +1,4 @@
-import { u as useRouter } from "./index-D7I8oply.js";
+import { u as useRouter } from "./index-2c_WNC4h.js";
 import { s as stdin_default } from "./ButtonSfc-CC9mCO7r.js";
 import { n as normalizeToArray, b as bigCamelize } from "./utils-DJzies15.js";
 import "./lodash-RJPfgWqI.js";
