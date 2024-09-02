@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 
 import { Button as VarButton } from '@varlet/ui'
 import '@varlet/ui/es/button/style/index.mjs'
@@ -24,6 +24,8 @@ onMounted(() => {
 </script>
 
 <template>
- <h1>about</h1>
- <VarButton type="primary" style="width: 150px;" @click="navigateToHomePage">go to home page</VarButton>
+  <h1>about</h1>
+  <VarButton type="primary" style="width: 150px" @click="navigateToHomePage"
+    >go to home page</VarButton
+  >
 </template>

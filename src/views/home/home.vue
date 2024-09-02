@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { useRouter } from 'vue-router';
+import { useRouter } from 'vue-router'
 import * as echarts from 'echarts'
 
 import { Button as VarButton } from '@varlet/ui'
@@ -45,14 +45,16 @@ onMounted(() => {
 
   option && myChart.setOption(option)
 
-  console.log(clamp(4, 3,5))
+  console.log(clamp(4, 3, 5))
   console.log(camelize('chouchouji'))
 })
 </script>
 
 <template>
   <h1 v-if="isNotEmptyArray(arr)">hhhhh</h1>
-  <VarButton type="primary" style="width: 150px;" @click="navigateToAboutPage">go to about page</VarButton>
+  <VarButton type="primary" style="width: 150px" @click="navigateToAboutPage"
+    >go to about page</VarButton
+  >
   <div id="main" style="width: 600px; height: 400px"></div>
   <header>
     <img alt="Vue logo" class="logo" src="../../assets/logo.svg" width="125" height="125" />
