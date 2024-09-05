@@ -13,6 +13,7 @@ build: {
   }
 }
 ```
+
 # Second Step
 
 install `rollup-plugin-external-globals`
@@ -49,4 +50,3 @@ add cdn in html file
 ```html
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 ```
-

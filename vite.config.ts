@@ -2,21 +2,24 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import externalGlobals from "rollup-plugin-external-globals";
+import externalGlobals from 'rollup-plugin-external-globals'
+import dropConsole from 'rollup-plugin-drop-console'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
   const isBuildCommand = command === 'build'
 
-  const plugins = [
-    vue()
-  ]
+  const plugins = [vue(), vueJsx()]
 
   if (isBuildCommand) {
-    plugins.push(externalGlobals({
-      vue: "Vue",
-      echarts: 'echarts',
-    }))
+    plugins.push(
+      externalGlobals({
+        vue: 'Vue',
+        echarts: 'echarts'
+      }),
+      dropConsole()
+    )
   }
 
   return {
@@ -44,6 +47,6 @@ export default defineConfig(({ command }) => {
           }
         }
       }
-    },
+    }
   }
 })

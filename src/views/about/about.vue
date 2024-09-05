@@ -8,6 +8,8 @@ import '@varlet/ui/es/button/style/index.mjs'
 import { normalizeToArray } from '@/utils/utils-array'
 import { bigCamelize } from '@/utils/utils-string'
 
+import TestComponent from './test'
+
 const router = useRouter()
 
 function navigateToHomePage() {
@@ -28,4 +30,5 @@ onMounted(() => {
   <VarButton type="primary" style="width: 150px" @click="navigateToHomePage"
     >go to home page</VarButton
   >
+  <TestComponent />
 </template>
