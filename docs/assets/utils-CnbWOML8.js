@@ -1,5 +1,7 @@
-import { i as isArray } from './lodash-RJPfgWqI.js'
+import { i as isArray } from "./lodash-RJPfgWqI.js";
 function isNotEmptyArray(val) {
-  return isArray(val) && val.length > 0
+  return isArray(val) && val.length > 0;
 }
-export { isNotEmptyArray as i }
+export {
+  isNotEmptyArray as i
+};

@@ -1,2 +1,4 @@
-var isArray = Array.isArray
-export { isArray as i }
+var isArray = Array.isArray;
+export {
+  isArray as i
+};
