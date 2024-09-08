@@ -1,4 +1,4 @@
-import { u as useRouter } from "./index-BIhoHI66.js";
+import { u as useRouter } from "./index-DHazxwGb.js";
 import { s as stdin_default } from "./ButtonSfc-CC9mCO7r.js";
 const TestComponent = /* @__PURE__ */ Vue.defineComponent({
   name: "TestComponent",
@@ -10,7 +10,10 @@ const TestComponent = /* @__PURE__ */ Vue.defineComponent({
 const TestComponent$1 = TestComponent;
 const _hoisted_1 = /* @__PURE__ */ Vue.createElementVNode("h1", null, "about", -1);
 const _sfc_main = /* @__PURE__ */ Vue.defineComponent({
-  __name: "about",
+  ...{
+    name: "AboutRouter"
+  },
+  __name: "about-router",
   setup(__props) {
     const router = useRouter();
     function navigateToHomePage() {

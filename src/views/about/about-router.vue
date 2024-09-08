@@ -10,6 +10,10 @@ import { bigCamelize } from '@/utils/utils-string'
 
 import TestComponent from './test'
 
+defineOptions({
+  name: 'AboutRouter'
+})
+
 const router = useRouter()
 
 function navigateToHomePage() {

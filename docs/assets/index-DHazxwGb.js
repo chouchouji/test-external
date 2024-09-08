@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./home-DaluizZ6.js","./ButtonSfc-CC9mCO7r.js","./ButtonSfc-CBsl0AUJ.css","./utils-CnbWOML8.js","./lodash-RJPfgWqI.js","./home-CV9Y_zdZ.css","./about-DYw0hGWX.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./home-router-nQnGgsW6.js","./ButtonSfc-CC9mCO7r.js","./ButtonSfc-CBsl0AUJ.css","./utils-CnbWOML8.js","./lodash-RJPfgWqI.js","./home-router-Bi8RUY1L.css","./about-router-Bvzxxdrg.js"])))=>i.map(i=>d[i]);
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) {
@@ -1957,12 +1957,12 @@ function extractChangingRecords(to, from) {
 function useRouter() {
   return Vue.inject(routerKey);
 }
-const Home = () => __vitePreload(() => import("./home-DaluizZ6.js"), true ? __vite__mapDeps([0,1,2,3,4,5]) : void 0, import.meta.url);
-const About = () => __vitePreload(() => import("./about-DYw0hGWX.js"), true ? __vite__mapDeps([6,1,2]) : void 0, import.meta.url);
+const HomeRouter = () => __vitePreload(() => import("./home-router-nQnGgsW6.js"), true ? __vite__mapDeps([0,1,2,3,4,5]) : void 0, import.meta.url);
+const AboutRouter = () => __vitePreload(() => import("./about-router-Bvzxxdrg.js"), true ? __vite__mapDeps([6,1,2]) : void 0, import.meta.url);
 const routes = [
   { path: "/", redirect: "/home" },
-  { path: "/home", component: Home },
-  { path: "/about", component: About }
+  { path: "/home", component: HomeRouter },
+  { path: "/about", component: AboutRouter }
 ];
 const router = createRouter({
   history: createWebHashHistory(),

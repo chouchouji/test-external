@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useRouter } from "./index-BIhoHI66.js";
+import { _ as _export_sfc, u as useRouter } from "./index-DHazxwGb.js";
 import { s as stdin_default } from "./ButtonSfc-CC9mCO7r.js";
 import { i as isNotEmptyArray } from "./utils-CnbWOML8.js";
 import "./lodash-RJPfgWqI.js";
@@ -173,7 +173,7 @@ const _sfc_main$1 = /* @__PURE__ */ Vue.defineComponent({
     };
   }
 });
-const _withScopeId = (n) => (Vue.pushScopeId("data-v-9b385c0f"), n = n(), Vue.popScopeId(), n);
+const _withScopeId = (n) => (Vue.pushScopeId("data-v-996087db"), n = n(), Vue.popScopeId(), n);
 const _hoisted_1 = { key: 0 };
 const _hoisted_2 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ Vue.createElementVNode("div", {
   id: "main",
@@ -188,7 +188,10 @@ const _hoisted_3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ Vue.create
 }, null, -1));
 const _hoisted_4 = { class: "wrapper" };
 const _sfc_main = /* @__PURE__ */ Vue.defineComponent({
-  __name: "home",
+  ...{
+    name: "HomeRouter"
+  },
+  __name: "home-router",
   setup(__props) {
     const arr = Vue.ref([1]);
     const router = useRouter();
@@ -244,7 +247,7 @@ const _sfc_main = /* @__PURE__ */ Vue.defineComponent({
     };
   }
 });
-const home = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-9b385c0f"]]);
+const homeRouter = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-996087db"]]);
 export {
-  home as default
+  homeRouter as default
 };

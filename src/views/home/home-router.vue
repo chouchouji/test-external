@@ -13,6 +13,10 @@ import { isNotEmptyArray } from '@/utils/utils-array'
 import { clamp } from '@/utils/utils-number'
 import { camelize } from '@/utils/utils-string'
 
+defineOptions({
+  name: 'HomeRouter'
+})
+
 const arr = ref([1])
 
 const router = useRouter()
