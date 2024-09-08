@@ -1,6 +1,6 @@
 # test-external
 
-This is a repo that lead you how to use `rollupOptions.external` in `vite`. Additionaly, your foramt is not `umd` or `iife`.
+This is a repo that lead you how to use `rollupOptions.external` in `vite`. Additionally, your format is not `umd` or `iife`.
 
 # First Step
 
@@ -23,7 +23,7 @@ pnpm add rollup-plugin-external-globals -D
 
 npm i rollup-plugin-external-globals -D
 
-yarn i rollup-plugin-external-globals -D
+yarn add rollup-plugin-external-globals -D
 ```
 
 register it in production mode
