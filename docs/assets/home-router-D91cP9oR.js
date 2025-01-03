@@ -1,4 +1,4 @@
-import { _ as _export_sfc, u as useRouter } from "./index-DHazxwGb.js";
+import { _ as _export_sfc, u as useRouter } from "./index-B5kt9RDp.js";
 import { s as stdin_default } from "./ButtonSfc-CC9mCO7r.js";
 import { i as isNotEmptyArray } from "./utils-CnbWOML8.js";
 import "./lodash-RJPfgWqI.js";

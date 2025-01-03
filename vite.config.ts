@@ -5,12 +5,13 @@ import vue from '@vitejs/plugin-vue'
 import externalGlobals from 'rollup-plugin-external-globals'
 import dropConsole from 'rollup-plugin-drop-console'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import magicPreloader from 'vite-plugin-magic-preloader';
 
 // https://vitejs.dev/config/
 export default defineConfig(({ command }) => {
   const isBuildCommand = command === 'build'
 
-  const plugins = [vue(), vueJsx()]
+  const plugins = [vue(), vueJsx(), magicPreloader()]
 
   if (isBuildCommand) {
     plugins.push(

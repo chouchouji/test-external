@@ -1,4 +1,4 @@
-import { u as useRouter } from "./index-DHazxwGb.js";
+import { u as useRouter } from "./index-B5kt9RDp.js";
 import { s as stdin_default } from "./ButtonSfc-CC9mCO7r.js";
 const TestComponent = /* @__PURE__ */ Vue.defineComponent({
   name: "TestComponent",
